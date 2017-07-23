@@ -25,7 +25,7 @@ namespace CoreAlquiler
             {
                 using (var data = new BDAlquilerVehiculoEntities())
 
-                //using (var data = new BDAlquilerVehiculoEntities())
+              
                 {
                     data.Marca.Add(marca);
                     data.SaveChanges();

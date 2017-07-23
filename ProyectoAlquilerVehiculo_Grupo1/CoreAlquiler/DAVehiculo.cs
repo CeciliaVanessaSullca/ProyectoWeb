@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace CoreAlquiler
 {
-    class DAVehiculo
+    public class DAVehiculo
     {
+        static public List<Vehiculo> listadoVehiculo()
+        {
+            List<Vehiculo> listado = new List<Vehiculo>();
+            using (var data = new BDAlquilerVehiculoEntities())
+            {
+                return data.Vehiculo.ToList();
+            }
+        }
     }
 }

@@ -199,6 +199,8 @@
     <Compile Include="Areas\Marca\MarcaAreaRegistration.cs" />
     <Compile Include="Areas\Modelo\Controllers\MainController.cs" />
     <Compile Include="Areas\Modelo\ModeloAreaRegistration.cs" />
+    <Compile Include="Areas\Vehiculo\Controllers\MainController.cs" />
+    <Compile Include="Areas\Vehiculo\VehiculoAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -242,6 +244,11 @@
     <Content Include="Areas\Modelo\Views\Main\Listado.cshtml" />
     <Content Include="Areas\Modelo\Views\Main\FormVehiculo.cshtml" />
     <Content Include="Areas\Modelo\Views\Main\Editar.cshtml" />
+    <Content Include="Areas\Vehiculo\Views\web.config" />
+    <Content Include="Areas\Vehiculo\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Vehiculo\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Vehiculo\Views\Main\Index.cshtml" />
+    <Content Include="Areas\Vehiculo\Views\Main\Listado.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -293,6 +300,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Marca\Models\" />
     <Folder Include="Areas\Modelo\Models\" />
+    <Folder Include="Areas\Vehiculo\Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

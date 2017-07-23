@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoAlquilerVehiculo_Grupo1", "ProyectoAlquilerVehiculo_Grupo1\ProyectoAlquilerVehiculo_Grupo1.csproj", "{7347DC83-6313-4BEC-9240-E74DB73D0526}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreAlquiler", "CoreAlquiler\CoreAlquiler.csproj", "{F3B3326D-9FFA-4158-ADB6-59635D653BFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7347DC83-6313-4BEC-9240-E74DB73D0526}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7347DC83-6313-4BEC-9240-E74DB73D0526}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7347DC83-6313-4BEC-9240-E74DB73D0526}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7347DC83-6313-4BEC-9240-E74DB73D0526}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3B3326D-9FFA-4158-ADB6-59635D653BFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3B3326D-9FFA-4158-ADB6-59635D653BFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3B3326D-9FFA-4158-ADB6-59635D653BFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3B3326D-9FFA-4158-ADB6-59635D653BFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

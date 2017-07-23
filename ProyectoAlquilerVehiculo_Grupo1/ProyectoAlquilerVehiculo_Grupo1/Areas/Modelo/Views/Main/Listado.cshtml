@@ -1,0 +1,52 @@
+﻿@model IEnumerable<CoreAlquiler.Modelo>
+
+<p>
+    @*@Html.ActionLink("Create New", "Create")*@
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Puertas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Precio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Marca.CodMarca)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Puertas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Precio)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Marca.Descripcion)*@
+
+            @Html.DisplayFor(modelItem => item.CodMarca)
+        </td>
+        <td>
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.CodModelo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CodModelo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CodModelo })*@
+
+
+            @Html.ActionLink("Editar", "Editar", "Main", new { area = "Modelo", codModelo = item.CodModelo }, null)|
+            @*@Html.ActionLink("Details", "Details", new { id = item.CodModelo }) |*@
+            @Html.ActionLink("Eliminar", "Eliminar", "Main", new { area = "Modelo", codModelo = item.CodModelo }, null)
+        </td>
+    </tr>
+}
+
+</table>

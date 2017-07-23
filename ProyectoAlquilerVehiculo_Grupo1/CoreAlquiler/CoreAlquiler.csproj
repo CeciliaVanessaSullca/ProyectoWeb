@@ -55,6 +55,7 @@
       <DependentUpon>General.tt</DependentUpon>
     </Compile>
     <Compile Include="DAMarca.cs" />
+    <Compile Include="DAModelo.cs" />
     <Compile Include="General.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -21,3 +21,4 @@ C:\Users\carlosjesus\Documents\GitHub\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo
 C:\Users\carlosjesus\Documents\GitHub\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\bin\Debug\es\EntityFramework.SqlServer.resources.dll
 C:\Users\carlosjesus\Documents\GitHub\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\obj\Debug\CoreAlquiler.dll
 C:\Users\carlosjesus\Documents\GitHub\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\obj\Debug\CoreAlquiler.pdb
+C:\Users\carlosjesus\Documents\GitHub\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\obj\Debug\CoreAlquiler.csprojResolveAssemblyReference.cache

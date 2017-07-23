@@ -9,7 +9,7 @@ namespace ProyectoAlquilerVehiculo_Grupo1.Areas.Modelo.Controllers
 {
     public class MainController : Controller
     {
-        // GET: Modelo/Main
+        
         public ActionResult Index()
         {
             return View();

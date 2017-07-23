@@ -18,5 +18,7 @@ namespace ProyectoAlquilerVehiculo_Grupo1.Areas.Vehiculo.Controllers
         {
             return PartialView(DAVehiculo.listadoVehiculo());
         }
+
+
     }
 }

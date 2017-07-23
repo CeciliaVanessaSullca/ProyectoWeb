@@ -249,6 +249,8 @@
     <Content Include="Areas\Vehiculo\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Vehiculo\Views\Main\Index.cshtml" />
     <Content Include="Areas\Vehiculo\Views\Main\Listado.cshtml" />
+    <Content Include="Areas\Vehiculo\Views\Main\FormVehiculo.cshtml" />
+    <Content Include="Areas\Vehiculo\Views\Main\Editar.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

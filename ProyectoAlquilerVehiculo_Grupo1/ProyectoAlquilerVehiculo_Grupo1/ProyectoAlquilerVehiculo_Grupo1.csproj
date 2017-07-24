@@ -260,6 +260,7 @@
     <Content Include="Areas\Marca\Views\Main\Index.cshtml" />
     <Content Include="Areas\Cliente\Views\Clientes\Index.cshtml" />
     <Content Include="Areas\Vehiculo\Views\Main\FormaVehiculo.cshtml" />
+    <Content Include="Areas\Vehiculo\Views\Main\Edita.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

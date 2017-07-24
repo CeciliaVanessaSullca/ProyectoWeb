@@ -12,7 +12,7 @@ namespace ProyectoAlquilerVehiculo_Grupo1.Areas.Cliente.Controllers
 {
     public class ClientesController : Controller
     {
-        // GET: Marca/Main
+       
         public ActionResult Index()
         {
             return View();
@@ -26,24 +26,26 @@ namespace ProyectoAlquilerVehiculo_Grupo1.Areas.Cliente.Controllers
         {
             return PartialView();
         }
-        public JsonResult GrabarCliente(string codcliente, string appat , string apma, string nombre, DateTime fec, int edad, string calle, string pais, string dep, string prov, string distr)
+        public JsonResult GrabarCliente(string codCliente, string apePaterno , string apeMaterno, string nombres, DateTime fechaNacimiento, int edad, string calle, string pais, string departamento, string provincia, string distrito)
         {
+
+
+       
             CoreAlquiler.Cliente cliente = new CoreAlquiler.Cliente();
 
-            cliente.CodCliente = codcliente;
-            cliente.ApePaterno = appat;
-            cliente.ApeMaterno = apma;
-            cliente.Nombres = nombre;
-            cliente.FechaNacimiento = fec;
+            cliente.CodCliente = codCliente;
+            cliente.ApePaterno = apePaterno;
+            cliente.ApeMaterno = apeMaterno;
+            cliente.Nombres = nombres;
+           cliente.FechaNacimiento = fechaNacimiento;
             cliente.Edad = edad;
             cliente.Calle = calle;
             cliente.Pais = pais;
-            cliente.Departamento = dep;
-            cliente.Provincia = prov;
-            cliente.Distrito = distr;
+            cliente.Departamento = departamento;
+            cliente.Provincia = provincia;
+            cliente.Distrito = distrito;
 
-
-            bool exito = DACliente.RegistrarCliente(cliente);
+             bool exito = DACliente.RegistrarCliente(cliente);
             string mensaje = string.Empty;
             if (exito)
             {

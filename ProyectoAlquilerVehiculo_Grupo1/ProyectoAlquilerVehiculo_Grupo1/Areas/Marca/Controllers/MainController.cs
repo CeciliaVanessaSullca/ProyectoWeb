@@ -32,6 +32,7 @@ namespace ProyectoAlquilerVehiculo_Grupo1.Areas.Marca.Controllers
             marca.Pais = pais;
             bool exito = DAMarca.RegistrarMarca(marca);
             string mensaje = string.Empty;
+
             if (exito)
             {
                 mensaje = "Resgistro satisfactorio y correcto";

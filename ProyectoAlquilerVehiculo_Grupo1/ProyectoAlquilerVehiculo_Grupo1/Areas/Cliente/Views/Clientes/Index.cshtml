@@ -1,4 +1,5 @@
 ﻿@model CoreAlquiler.Cliente
+
 @{
     ViewBag.Title = "Index";
 }
@@ -92,34 +93,34 @@
     });
 
     $('#btnGrabarCliente').click(function () {
-        //alert("Prueba evento");
+        alert("Prueba evento");
         var modal = $("#modalForm");
-        var vCodcliente = modal.find(".modal-body #CodCliente").val();
+        var vCodCliente = modal.find(".modal-body #CodCliente").val();
         var vApePaterno = modal.find(".modal-body #ApePaterno").val();
         var vApeMaterno = modal.find(".modal-body #ApeMaterno").val();
-        var VNombres = modal.find(".modal-body #Nombres").val();
-        var VFechaNacimiento = modal.find(".modal-body #FechaNacimiento").val();
-        var VEdad = modal.find(".modal-body #Edad").val();
-        var VCalle = modal.find(".modal-body #Calle").val();
-        var VPais = modal.find(".modal-body #Pais").val();
-        var VDepartamento = modal.find(".modal-body #Departamento").val();
-        var VProvincia = modal.find(".modal-body #Provincia").val();
-        var VDistrito = modal.find(".modal-body #Distrito").val();
-        alert(vCodcliente);
+        var vNombres = modal.find(".modal-body #Nombres").val();
+        var vFechaNacimiento = modal.find(".modal-body #FechaNacimiento").val();
+        var vEdad = modal.find(".modal-body #Edad").val();
+        var vCalle = modal.find(".modal-body #Calle").val();
+        var vPais = modal.find(".modal-body #Pais").val();
+        var vDepartamento = modal.find(".modal-body #Departamento").val();
+        var vProvincia = modal.find(".modal-body #Provincia").val();
+        var vDistrito = modal.find(".modal-body #Distrito").val();
+        alert(vCodCliente);
         alert(vApePaterno);
         alert(vApeMaterno);
-        alert(VNombres);
-        alert(VFechaNacimiento);
-        alert(VEdad)
-        alertVCalle()
-        alert(VPais)
-        alert(VDepartamento)
-        alert(VProvincia)
-        alert(VDistrito)
+        alert(vNombres);
+        alert(vFechaNacimiento);
+        alert(vEdad);
+        alert(vCalle);
+        alert(vPais);
+        alert(vDepartamento);
+        alert(vProvincia);
+        alert(vDistrito);
         $.ajax({
             type: "POST",
             url: "/Cliente/Clientes/GrabarCliente",
-            data: { codCliente: vCodcliente, apePaterno: vApePaterno, apeMaterno: vApeMaterno, nombres: VNombres, fechaNacimiento: VFechaNacimiento, edad: VEdad, calle: VCalle, pais: VPais, departamento: VDepartamento, provincia: VProvincia, distrito :VDistrito },
+            data: { codCliente: vCodCliente, apePaterno: vApePaterno, apeMaterno: vApeMaterno, nombres: vNombres, fechaNacimiento: vFechaNacimiento, edad: vEdad, calle: vCalle, pais: vPais, departamento: vDepartamento, provincia: vProvincia, distrito :vDistrito },
 
             success: function (html) {
                 alert(html);

@@ -235,7 +235,6 @@
     <Content Include="Areas\Marca\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Marca\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Marca\Views\Main\Listado.cshtml" />
-    <Content Include="Areas\Marca\Views\Main\Index.cshtml" />
     <Content Include="Areas\Marca\Views\Main\FormVehiculo.cshtml" />
     <Content Include="Areas\Marca\Views\Main\Editar.cshtml" />
     <Content Include="Areas\Marca\Views\Main\Detalle.cshtml" />
@@ -258,7 +257,9 @@
     <Content Include="Areas\Cliente\Views\Clientes\FormCliente.cshtml" />
     <Content Include="Areas\Cliente\Views\Clientes\Editar.cshtml" />
     <Content Include="Areas\Cliente\Views\Clientes\Detalle.cshtml" />
+    <Content Include="Areas\Marca\Views\Main\Index.cshtml" />
     <Content Include="Areas\Cliente\Views\Clientes\Index.cshtml" />
+    <Content Include="Areas\Vehiculo\Views\Main\FormaVehiculo.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

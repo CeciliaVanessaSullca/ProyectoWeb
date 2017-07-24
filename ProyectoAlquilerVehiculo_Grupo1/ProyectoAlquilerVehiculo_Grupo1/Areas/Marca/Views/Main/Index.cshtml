@@ -60,7 +60,7 @@
 <script>
 
     $('#btnCargarMarca').click(function () {
-        
+
         CargarListadoMarca();
     });
 
@@ -75,9 +75,9 @@
     }
 
     $('#btnNuevo').click(function () {
-       
+
         var modal = $("#modalForm");
-     
+
         $.ajax({
             type: "POST",
             url: "/Marca/Main/FormVehiculo",
@@ -86,7 +86,7 @@
                 modal.modal();
             }
         });
-        
+
     });
 
     $('#btnGrabarMarca').click(function () {
@@ -106,7 +106,7 @@
 
             success: function (html) {
                 alert(html);
-           
+
             }
     });
     });

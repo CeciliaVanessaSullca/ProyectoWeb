@@ -11,7 +11,8 @@ namespace CoreAlquiler
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Cliente
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,19 +20,46 @@ namespace CoreAlquiler
         {
             this.Reserva = new HashSet<Reserva>();
         }
-    
+        [Range(0, Int32.MaxValue, ErrorMessage = "El campo no debe tomar valores negativos")]
         public string CodCliente { get; set; }
+        [StringLength(50)]
+        [DataType(DataType.Text)]
+        [RegularExpression("^[a-zA-Z ]*$", ErrorMessage = "Ingrese solo caracteres")]
         public string ApePaterno { get; set; }
+        [StringLength(50)]
+        [DataType(DataType.Text)]
+        [RegularExpression("^[a-zA-Z ]*$", ErrorMessage = "Ingrese solo caracteres")]
         public string ApeMaterno { get; set; }
+        [StringLength(50)]
+        [DataType(DataType.Text)]
+        [RegularExpression("^[a-zA-Z ]*$", ErrorMessage = "Ingrese solo caracteres")]
         public string Nombres { get; set; }
+        [DataType(DataType.Date)]
         public Nullable<System.DateTime> FechaNacimiento { get; set; }
+        [Range(18, 100, ErrorMessage = "El campo no debe tomar valores negativos y una edad mayor a 18 años")]
+        [DataType(DataType.Text)]
         public Nullable<int> Edad { get; set; }
+        [StringLength(50)]
+        [DataType(DataType.Text)]
+        [RegularExpression("^[a-zA-Z ]*$", ErrorMessage = "Ingrese solo caracteres")]
         public string Calle { get; set; }
+        [StringLength(50)]
+        [DataType(DataType.Text)]
+        [RegularExpression("^[a-zA-Z ]*$", ErrorMessage = "Ingrese solo caracteres")]
         public string Pais { get; set; }
+        [StringLength(50)]
+        [DataType(DataType.Text)]
+        [RegularExpression("^[a-zA-Z ]*$", ErrorMessage = "Ingrese solo caracteres")]
         public string Departamento { get; set; }
+        [StringLength(50)]
+        [DataType(DataType.Text)]
+        [RegularExpression("^[a-zA-Z ]*$", ErrorMessage = "Ingrese solo caracteres")]
         public string Provincia { get; set; }
+        [StringLength(50)]
+        [DataType(DataType.Text)]
+        [RegularExpression("^[a-zA-Z ]*$", ErrorMessage = "Ingrese solo caracteres")]
         public string Distrito { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Reserva> Reserva { get; set; }
     }

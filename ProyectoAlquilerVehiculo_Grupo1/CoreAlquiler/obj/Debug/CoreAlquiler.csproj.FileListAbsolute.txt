@@ -44,3 +44,15 @@ C:\Users\carlosjesus\Documents\GitHub\respaldo\ProyectoWeb\ProyectoAlquilerVehic
 C:\Users\carlosjesus\Documents\GitHub\respaldo\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\bin\Debug\es\EntityFramework.SqlServer.resources.dll
 C:\Users\carlosjesus\Documents\GitHub\respaldo\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\obj\Debug\CoreAlquiler.dll
 C:\Users\carlosjesus\Documents\GitHub\respaldo\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\obj\Debug\CoreAlquiler.pdb
+C:\Users\jorge\Source\Repos\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\bin\Debug\CoreAlquiler.dll.config
+C:\Users\jorge\Source\Repos\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\bin\Debug\CoreAlquiler.dll
+C:\Users\jorge\Source\Repos\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\bin\Debug\CoreAlquiler.pdb
+C:\Users\jorge\Source\Repos\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\bin\Debug\EntityFramework.dll
+C:\Users\jorge\Source\Repos\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jorge\Source\Repos\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\bin\Debug\EntityFramework.xml
+C:\Users\jorge\Source\Repos\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jorge\Source\Repos\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\jorge\Source\Repos\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+C:\Users\jorge\Source\Repos\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\obj\Debug\CoreAlquiler.csprojResolveAssemblyReference.cache
+C:\Users\jorge\Source\Repos\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\obj\Debug\CoreAlquiler.dll
+C:\Users\jorge\Source\Repos\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\obj\Debug\CoreAlquiler.pdb

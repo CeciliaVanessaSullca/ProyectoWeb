@@ -1,132 +1,87 @@
-﻿@model CoreAlquiler.Cliente
+﻿@model IEnumerable<CoreAlquiler.Cliente>
 
 @{
     ViewBag.Title = "Index";
 }
+
 <h2>Index</h2>
-<input type="button" class="btn btn-info" value="Nuevo Registro" id="btnNuevoo" />
-<br />
-<br />
-<input type="button" class="btn btn-success" value="Cargar Cliente" id="btnCargarCliente" />
-<br />
-<br />
-<div id="divListadoCliente">
-</div>
-<div id="modalForm" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="gridSystemModalLabel">Modal title</h4>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-4">.col-md-4</div>
-                    <div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
-                    <div class="col-md-2 col-md-offset-4">.col-md-2 .col-md-offset-4</div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-9">
-                        Level 1: .col-sm-9
-                        <div class="row">
-                            <div class="col-xs-8 col-sm-6">
-                                Level 2: .col-xs-8 .col-sm-6
-                            </div>
-                            <div class="col-xs-4 col-sm-6">
-                                Level 2: .col-xs-4 .col-sm-6
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" id="btnGrabarCliente" class="btn btn-primary">Grabar</button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-<script>
 
-    $('#btnCargarCliente').click(function () {
-        //alert("Ando bien");
-        CargarListadoCliente();
-    });
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ApePaterno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApeMaterno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaNacimiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Edad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Calle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pais)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Departamento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Provincia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Distrito)
+        </th>
+        <th></th>
+    </tr>
 
-    function CargarListadoCliente() {
-        $.ajax({
-            type: "POST",
-            url: "/Cliente/Clientes/Listado",
-            success: function (html) {
-                $("#divListadoCliente").html(html);
-            }
-        });
-    }
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApePaterno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApeMaterno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaNacimiento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Edad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Calle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pais)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Departamento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Provincia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Distrito)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CodCliente }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CodCliente }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CodCliente })
+        </td>
+    </tr>
+}
 
-    $('#btnNuevoo').click(function () {
-        //alert("asdasds");
-        var modal = $("#modalForm");
-        // modal.modal();
-        $.ajax({
-            type: "POST",
-            url: "/Cliente/Clientes/FormCliente",
-            success: function (html) {
-                modal.find(".modal-body").html(html);
-                modal.modal();
-            }
-        });
-        //$.ajax({
-        //    type: "POST",
-        //    url: "/Administrador/Main/FormVehiculo",
-        //    //data: { esTiempo: vEsTiempo },
-        //    success: function (html) {
-        //        modal.find(".modal-body").html(html);
-        //        modal.modal();
-        //    }
-        //});
-    });
-
-    $('#btnGrabarCliente').click(function () {
-        alert("Prueba evento");
-        var modal = $("#modalForm");
-        var vCodCliente = modal.find(".modal-body #CodCliente").val();
-        var vApePaterno = modal.find(".modal-body #ApePaterno").val();
-        var vApeMaterno = modal.find(".modal-body #ApeMaterno").val();
-        var vNombres = modal.find(".modal-body #Nombres").val();
-        var vFechaNacimiento = modal.find(".modal-body #FechaNacimiento").val();
-        var vEdad = modal.find(".modal-body #Edad").val();
-        var vCalle = modal.find(".modal-body #Calle").val();
-        var vPais = modal.find(".modal-body #Pais").val();
-        var vDepartamento = modal.find(".modal-body #Departamento").val();
-        var vProvincia = modal.find(".modal-body #Provincia").val();
-        var vDistrito = modal.find(".modal-body #Distrito").val();
-        alert(vCodCliente);
-        alert(vApePaterno);
-        alert(vApeMaterno);
-        alert(vNombres);
-        alert(vFechaNacimiento);
-        alert(vEdad);
-        alert(vCalle);
-        alert(vPais);
-        alert(vDepartamento);
-        alert(vProvincia);
-        alert(vDistrito);
-        $.ajax({
-            type: "POST",
-            url: "/Cliente/Clientes/GrabarCliente",
-            data: { codCliente: vCodCliente, apePaterno: vApePaterno, apeMaterno: vApeMaterno, nombres: vNombres, fechaNacimiento: vFechaNacimiento, edad: vEdad, calle: vCalle, pais: vPais, departamento: vDepartamento, provincia: vProvincia, distrito :vDistrito },
-
-            success: function (html) {
-                alert(html);
-               // modal.find(".modal-body").html(html);
-               // modal.modal();
-            }
-    });
-    });
-</script>
+</table>

@@ -12,79 +12,116 @@ namespace ProyectoAlquilerVehiculo_Grupo1.Areas.Cliente.Controllers
 {
     public class ClientesController : Controller
     {
-       
+        private BDAlquilerVehiculoEntities db = new BDAlquilerVehiculoEntities();
+
+        // GET: Cliente/Main
         public ActionResult Index()
+        {
+            return View(db.Cliente.ToList());
+        }
+
+        // GET: Cliente/Main/Details/5
+        public ActionResult Details(string id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            CoreAlquiler.Cliente cliente = db.Cliente.Find(id);
+            if (cliente == null)
+            {
+                return HttpNotFound();
+            }
+            return View(cliente);
+        }
+
+        // GET: Cliente/Main/Create
+        public ActionResult Create()
         {
             return View();
         }
 
-        public ActionResult Listado()
-        {
-            return PartialView(DACliente.listadoCliente());
-        }
-        public ActionResult FormCliente()
-        {
-            return PartialView();
-        }
-        public JsonResult GrabarCliente(string codCliente, string apePaterno , string apeMaterno, string nombres, DateTime fechaNacimiento, int edad, string calle, string pais, string departamento, string provincia, string distrito)
-        {
-
-
-       
-            CoreAlquiler.Cliente cliente = new CoreAlquiler.Cliente();
-
-            cliente.CodCliente = codCliente;
-            cliente.ApePaterno = apePaterno;
-            cliente.ApeMaterno = apeMaterno;
-            cliente.Nombres = nombres;
-           cliente.FechaNacimiento = fechaNacimiento;
-            cliente.Edad = edad;
-            cliente.Calle = calle;
-            cliente.Pais = pais;
-            cliente.Departamento = departamento;
-            cliente.Provincia = provincia;
-            cliente.Distrito = distrito;
-
-             bool exito = DACliente.RegistrarCliente(cliente);
-            string mensaje = string.Empty;
-            if (exito)
-            {
-                mensaje = "Resgistro satisfactorio y correcto";
-
-            }
-            else
-            {
-                return Json(mensaje, JsonRequestBehavior.AllowGet);
-            }
-
-            return Json("Registro satisfactorio", JsonRequestBehavior.AllowGet);
-        }
-        public ActionResult Eliminar(string codcliente)
-        {
-            bool exito = DACliente.EliminarCliente(codcliente);
-            return RedirectToAction("Index");
-        }
-        public ActionResult Editar(string codcliente)
-        {
-            CoreAlquiler.Cliente cliente = DACliente.listadoCliente().Where(x => x.CodCliente == codcliente).FirstOrDefault();
-            return View(cliente);
-
-
-        }
-
+        // POST: Cliente/Main/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        public ActionResult Editar(CoreAlquiler.Cliente cliente)
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "CodCliente,ApePaterno,ApeMaterno,Nombres,FechaNacimiento,Edad,Calle,Pais,Departamento,Provincia,Distrito")] CoreAlquiler.Cliente cliente)
         {
-            bool exito = DACliente.ActualizarCliente(cliente);
+            if (ModelState.IsValid)
+            {
+                db.Cliente.Add(cliente);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(cliente);
+        }
+
+        // GET: Cliente/Main/Edit/5
+        public ActionResult Edit(string id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            CoreAlquiler.Cliente cliente = db.Cliente.Find(id);
+            if (cliente == null)
+            {
+                return HttpNotFound();
+            }
+            return View(cliente);
+        }
+
+        // POST: Cliente/Main/Edit/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "CodCliente,ApePaterno,ApeMaterno,Nombres,FechaNacimiento,Edad,Calle,Pais,Departamento,Provincia,Distrito")] CoreAlquiler.Cliente cliente)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(cliente).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(cliente);
+        }
+
+        // GET: Cliente/Main/Delete/5
+        public ActionResult Delete(string id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            CoreAlquiler.Cliente cliente = db.Cliente.Find(id);
+            if (cliente == null)
+            {
+                return HttpNotFound();
+            }
+            return View(cliente);
+        }
+
+        // POST: Cliente/Main/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(string id)
+        {
+            CoreAlquiler.Cliente cliente = db.Cliente.Find(id);
+            db.Cliente.Remove(cliente);
+            db.SaveChanges();
             return RedirectToAction("Index");
         }
 
-        public ActionResult Detalle(string codCiente)
+        protected override void Dispose(bool disposing)
         {
-            CoreAlquiler.Cliente cliente = DACliente.listadoCliente().Where(x => x.CodCliente == codCiente).FirstOrDefault();
-            return View(cliente);
-
-
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
         }
     }
 }

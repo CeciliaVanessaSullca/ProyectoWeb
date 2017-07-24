@@ -37,7 +37,7 @@ namespace ProyectoAlquilerVehiculo_Grupo1.Areas.Vehiculo.Controllers
 
             vehiculo.Color = color;
             vehiculo.CodModelo = codModelo;
-            //vehiculo.Disponible = disponible;
+           // vehiculo.Disponible = disponible;
 
 
 

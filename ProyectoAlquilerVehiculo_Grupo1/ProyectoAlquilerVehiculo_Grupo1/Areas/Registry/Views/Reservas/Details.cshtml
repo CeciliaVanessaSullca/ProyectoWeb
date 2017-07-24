@@ -1,0 +1,66 @@
+﻿@model CoreAlquiler.Reserva
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Reserva</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaReserva)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaReserva)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NroDias)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NroDias)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NroRetraso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NroRetraso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.ApePaterno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.ApePaterno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vehiculo.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vehiculo.Descripcion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CodReserva }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

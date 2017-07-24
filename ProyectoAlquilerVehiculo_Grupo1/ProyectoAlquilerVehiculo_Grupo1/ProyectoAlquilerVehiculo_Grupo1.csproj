@@ -201,6 +201,8 @@
     <Compile Include="Areas\Marca\MarcaAreaRegistration.cs" />
     <Compile Include="Areas\Modelo\Controllers\MainController.cs" />
     <Compile Include="Areas\Modelo\ModeloAreaRegistration.cs" />
+    <Compile Include="Areas\Registry\Controllers\ReservasController.cs" />
+    <Compile Include="Areas\Registry\RegistryAreaRegistration.cs" />
     <Compile Include="Areas\Vehiculo\Controllers\MainController.cs" />
     <Compile Include="Areas\Vehiculo\VehiculoAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -260,6 +262,14 @@
     <Content Include="Areas\Cliente\Views\Clientes\Details.cshtml" />
     <Content Include="Areas\Cliente\Views\Clientes\Edit.cshtml" />
     <Content Include="Areas\Cliente\Views\Clientes\Index.cshtml" />
+    <Content Include="Areas\Registry\Views\web.config" />
+    <Content Include="Areas\Registry\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Registry\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Registry\Views\Reservas\Create.cshtml" />
+    <Content Include="Areas\Registry\Views\Reservas\Delete.cshtml" />
+    <Content Include="Areas\Registry\Views\Reservas\Details.cshtml" />
+    <Content Include="Areas\Registry\Views\Reservas\Edit.cshtml" />
+    <Content Include="Areas\Registry\Views\Reservas\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -312,6 +322,7 @@
     <Folder Include="Areas\Cliente\Models\" />
     <Folder Include="Areas\Marca\Models\" />
     <Folder Include="Areas\Modelo\Models\" />
+    <Folder Include="Areas\Registry\Models\" />
     <Folder Include="Areas\Vehiculo\Models\" />
   </ItemGroup>
   <ItemGroup>

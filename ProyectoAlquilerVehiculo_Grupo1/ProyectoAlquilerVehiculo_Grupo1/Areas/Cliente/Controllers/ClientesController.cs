@@ -41,6 +41,8 @@ namespace ProyectoAlquilerVehiculo_Grupo1.Areas.Cliente.Controllers
             cliente.Departamento = dep;
             cliente.Provincia = prov;
             cliente.Distrito = distr;
+
+
             bool exito = DACliente.RegistrarCliente(cliente);
             string mensaje = string.Empty;
             if (exito)

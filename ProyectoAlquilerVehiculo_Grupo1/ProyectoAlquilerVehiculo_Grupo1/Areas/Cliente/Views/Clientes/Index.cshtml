@@ -9,7 +9,7 @@
 <input type="button" class="btn btn-success" value="Cargar Cliente" id="btnCargarCliente" />
 <br />
 <br />
-<div id="divListadoModelo">
+<div id="divListadoCliente">
 </div>
 <div id="modalForm" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
     <div class="modal-dialog" role="document">
@@ -63,7 +63,7 @@
             type: "POST",
             url: "/Cliente/Clientes/Listado",
             success: function (html) {
-                $("#divListadoModelo").html(html);
+                $("#divListadoCliente").html(html);
             }
         });
     }
@@ -119,7 +119,7 @@
         $.ajax({
             type: "POST",
             url: "/Cliente/Clientes/GrabarCliente",
-            data: { CodCliente: vCodcliente, ApePaterno: vApePaterno, ApeMaterno: vApeMaterno, Nombres: VNombres, FechaNacimiento: VFechaNacimiento, Edad: VEdad, Calle: VCalle, Pais: VPais, Departamento: VDepartamento, Provincia: VProvincia, Distrito :VDistrito },
+            data: { codCliente: vCodcliente, apePaterno: vApePaterno, apeMaterno: vApeMaterno, nombres: VNombres, fechaNacimiento: VFechaNacimiento, edad: VEdad, calle: VCalle, pais: VPais, departamento: VDepartamento, provincia: VProvincia, distrito :VDistrito },
 
             success: function (html) {
                 alert(html);

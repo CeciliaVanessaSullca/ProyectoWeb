@@ -53,14 +53,14 @@
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 <button type="button" id="btnGrabarModelo" class="btn btn-primary">Grabar</button>
             </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+        </div>
+    </div>
+</div>
 
 <script>
 
     $('#btnCargarModelo').click(function () {
-        //alert("Ando bien");
+      
         CargarListadoModelo();
     });
 
@@ -75,9 +75,9 @@
     }
 
     $('#btnNuevo').click(function () {
-        //alert("asdasds");
+       
         var modal = $("#modalForm");
-        // modal.modal();
+        
         $.ajax({
             type: "POST",
             url: "/Modelo/Main/FormVehiculo",
@@ -86,15 +86,7 @@
                 modal.modal();
             }
         });
-        //$.ajax({
-        //    type: "POST",
-        //    url: "/Administrador/Main/FormVehiculo",
-        //    //data: { esTiempo: vEsTiempo },
-        //    success: function (html) {
-        //        modal.find(".modal-body").html(html);
-        //        modal.modal();
-        //    }
-        //});
+     
     });
 
     $('#btnGrabarModelo').click(function () {
@@ -118,8 +110,7 @@
 
             success: function (html) {
                 alert(html);
-               // modal.find(".modal-body").html(html);
-               // modal.modal();
+              
             }
     });
     });

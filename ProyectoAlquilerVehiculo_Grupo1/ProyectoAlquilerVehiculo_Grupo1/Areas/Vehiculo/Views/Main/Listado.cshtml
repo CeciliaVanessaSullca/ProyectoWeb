@@ -42,9 +42,15 @@
             @Html.DisplayFor(modelItem => item.CodModelo)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CodVehiculo }) |
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.CodVehiculo }) |
             @Html.ActionLink("Details", "Details", new { id=item.CodVehiculo }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CodVehiculo })
+            @Html.ActionLink("Delete", "Delete", new { id=item.CodVehiculo })*@
+
+
+
+            @Html.ActionLink("Editar", "Editar", "Main", new { area = "Vehiculo", codVehiculo = item.CodVehiculo }, null)|
+            @*@Html.ActionLink("Details", "Details", new { id = item.CodModelo }) |*@
+            @Html.ActionLink("Eliminar", "Eliminar", "Main", new { area = "Vehiculo", codVehiculo = item.CodVehiculo }, null)
         </td>
     </tr>
 }

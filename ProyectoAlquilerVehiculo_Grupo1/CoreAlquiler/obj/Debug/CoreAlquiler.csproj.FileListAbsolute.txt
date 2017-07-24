@@ -33,3 +33,15 @@ C:\Users\cecilia\Documents\GitHub\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\Co
 C:\Users\cecilia\Documents\GitHub\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\bin\Debug\es\EntityFramework.SqlServer.resources.dll
 C:\Users\cecilia\Documents\GitHub\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\obj\Debug\CoreAlquiler.dll
 C:\Users\cecilia\Documents\GitHub\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\obj\Debug\CoreAlquiler.pdb
+C:\Users\carlosjesus\Documents\GitHub\respaldo\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\bin\Debug\CoreAlquiler.dll.config
+C:\Users\carlosjesus\Documents\GitHub\respaldo\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\bin\Debug\CoreAlquiler.dll
+C:\Users\carlosjesus\Documents\GitHub\respaldo\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\bin\Debug\CoreAlquiler.pdb
+C:\Users\carlosjesus\Documents\GitHub\respaldo\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\bin\Debug\EntityFramework.dll
+C:\Users\carlosjesus\Documents\GitHub\respaldo\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\carlosjesus\Documents\GitHub\respaldo\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\bin\Debug\EntityFramework.xml
+C:\Users\carlosjesus\Documents\GitHub\respaldo\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\carlosjesus\Documents\GitHub\respaldo\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\carlosjesus\Documents\GitHub\respaldo\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+C:\Users\carlosjesus\Documents\GitHub\respaldo\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\obj\Debug\CoreAlquiler.csprojResolveAssemblyReference.cache
+C:\Users\carlosjesus\Documents\GitHub\respaldo\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\obj\Debug\CoreAlquiler.dll
+C:\Users\carlosjesus\Documents\GitHub\respaldo\ProyectoWeb\ProyectoAlquilerVehiculo_Grupo1\CoreAlquiler\obj\Debug\CoreAlquiler.pdb

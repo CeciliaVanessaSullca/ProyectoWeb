@@ -23,7 +23,7 @@ namespace CoreAlquiler
             bool exito = true;
             try
             {
-                //a
+                //ass
                 using (var data = new BDAlquilerVehiculoEntities())
 
 
